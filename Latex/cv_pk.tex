@@ -1,0 +1,219 @@
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[left=0.2in,right=0.8in,top=0.6in,bottom=0.6in]{geometry}  % Reduce document margins
+\setlength{\hintscolumnwidth}{0.8in} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+
+% Remove black lines on the side and increase the vertical spacing between the sections
+\makeatletter
+\RenewDocumentCommand{\section}{sm}{%
+	\par\addvspace{0.25in}% vertical spacing
+	\phantomsection{}
+	\addcontentsline{toc}{section}{#2}%
+	\parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\rule{\hintscolumnwidth}{0.6ex}}}% black lines
+	\hspace{\separatorcolumnwidth}%
+	\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\textbf{#2}}}%
+	\par\nobreak\addvspace{2ex}\@afterheading
+}
+\makeatother
+
+% \renewcommand*{\sectionfont}{\Large\bfseries\scshape}
+
+% CV Title
+\renewcommand*{\namefont}{\fontsize{26}{32}\mdseries\upshape}
+\firstname{\hspace{0.4in} Parmenion}
+\familyname{Koutsogeorgos} 
+
+\address{Brouwersweg 100, 6216 EG}{Maastricht, NL}
+\mobile{(+30) 6909156296}
+
+\renewcommand{\emaillink}[1]{#1}
+\email{\href{mailto:parmenkouts99@gmail.com}{parmenkouts99@gmail.com}}
+
+\social[linkedin][linkedin.com/in/parmenion-koutsogeorgos-ba18b1133/]{Parmenion Koutsogeorgos}
+
+\social[github][github.com/pk-470]{pk-470}
+
+
+% Change vertical alignment of name
+\usepackage{etoolbox}
+\patchcmd{\makecvhead}{{minipage}[b]}{{minipage}[c]}{}{}
+\patchcmd{\makecvhead}{{tabular}[b]}{{tabular}[c]}{}{}
+
+
+\nopagenumbers
+
+
+\begin{document}
+
+
+\makecvtitle
+
+
+\cvitem[0.8em]{}{
+	I am a Cambridge Mathematics graduate currently on my first year of a two year master's in Artificial Intelligence at Maastricht University. After finishing my bachelor's and first master's in Mathematics I worked as a math tutor for a year. In the meanwhile I independently developed my programming skills and took online courses on the basics of Artificial Intelligence. I am currently interested in areas such as Computer Vision with medical applications and A.I.\ for Robotics.
+}
+
+
+\section{Education}
+
+\cventry[0.8em]{2022 -}{Master's in Artificial Intelligence}{Maastricht University}{}{}{
+	So far I have taken courses in Search Algorithms, Machine Learning and Deep Learning, while I am currently studying Autonomous Robotics Systems and Dynamic Game Theory. In the following period I will be taking courses on Computer Vision and Text Mining. Additionally, as a part of my degree I am working on a number of research group projects, currently focusing on path-planning for a robotic arm.
+}
+
+\cventry[0.8em]{2017 - 2021}{Master of Mathematics \normalfont{(bachelor's \& integrated master's)}}{University of Cambridge}{}{67/100}{
+	In my two final years of study I mainly focused on Logic and Combinatorics, taking courses such as: Model Theory (on which I wrote my master's thesis), Topics in Combinatorics, Ramsey Theory, Additive Combinatorics, Logic and Set Theory, Graph Theory. Other topics I have taken include: Differential Equations, Statistics, Linear Algebra, Number Theory, Group/Ring/Module Theory, Real and Complex Analysis, Topology, Probability and Measure Theory, Linear Analysis, Differential Geometry, Riemman Surfaces.
+}
+
+\cventry[0.8em]{2014 - 2017}{Apolytirion of Geniko Lykeio \normalfont{(high-school diploma)}}{Mandoulides Schools}{}{19.9/20}{
+	Due to my strong performance in school exams as well as extracuriccular maths and physics competitions (most notably winning a bronze medal in the 18th Junior Balkan Mathematical Olympiad, a gold medal in the 31st Greek Junior National Mathematical Olympiad and the first place in the 25th Panhellenic Physics Competition) I received a full scholarship throughout my years of study in Mandoulides Schools.
+}
+
+
+\section{Previous work experience}
+
+\cvitem[0.8em]{2021 - 2022}{
+	I worked as a math tutor, tutoring people who were preparing for university as well as for math competitions.
+}
+
+\cvitem[0.8em]{2017 -}{
+	Ever since I graduated high-school I often return to Mandoulides Schools to teach mathematics for competitions.
+}
+
+
+\section{Computer skills}
+
+\cvitem[0.8em]{\textbullet}{
+	\textbf{Python} (competent): I have used Python extensively for my master's in Artificial Intelligence as well as multiple personal projects. In particular, I have experience working with libraries such as NumPy, Pandas, Matplotlib, TensorFlow and PyTorch.
+}
+
+\cvitem[0.8em]{\textbullet}{
+	\textbf{MATLAB} (competent): I have used MATLAB extensively in various projects for my degree in Mathematics.
+}
+
+\cvitem[0.8em]{\textbullet}{
+	\textbf{Linux} (intermediate): I am familiar with Ubuntu and I have written a number of Bash scripts to automate various tasks or customize Ubuntu's behaviour and appearance.
+}
+
+\cvitem[0.8em]{\textbullet}{
+	\textbf{HTML} and \textbf{CSS} (intermediate): I have learned some HTML and CSS through the online web development course ``The Odin Project".
+}
+
+\cvitem[0.8em]{\textbullet}{
+	\textbf{\LaTeX} \ (competent): I regularly use Latex to write technical and non-technical documents.
+}
+
+
+\section{Selected projects from my A.I.\ master's:}
+
+\cventry[0.8em]{2023 -}{Action and Path Planning for Environment-Aware and Collision-Free Object Manipulation}{}{}{}{
+	The aim of this group project is to automate the manipulation of small objects by a robotic arm. This task involves three main components:
+	\begin{itemize}
+		\item[\textbullet] building a representation of the environment using 3D computer vision techniques;
+		\item[\textbullet] identifying optimal grasping position for each object;
+		\item[\textbullet] planning the path of the robotic arm towards the target position.
+	\end{itemize}
+}
+
+
+\cventry[0.8em]{2022 - 2023}{Automatic Music Sheet Page Turner}{}{
+	\faGithub\ \href{https://github.com/csotogd/Music-Score-Localization-2.0}{\protect\path{csotogd/Music-Score-Localization-2.0}}}{}{
+	Our group developed an algorithm with the aim to localize a recorded song snippet as played by a human within the music score of the entire song. Our algorithm is based on the one developed for the app Shazam, while also including techniques such as Monte-Carlo Robot Localization.
+}
+
+\cventry[0.8em]{2022}{Impasse AI}{}{
+	\faGithub\ \href{https://github.com/pk-470/impasse-ai}{\protect\path{pk-470/impasse-ai}}}{}{
+	I created a search engine for the game Impasse by Mark Steere which uses Alpha-Beta search along with move ordering, iterative deepening and a transposition table. When matched with the engines of my classmates in a tournament my engine came 3rd overall, surpassing many engines which could search deeper within the allowed time due to being written in languages faster than Python.
+}
+
+
+\section{Selected computational projects from my Mathematics bachelor's:}
+
+\cventry[0.8em]{2020}{Graph Colouring}{}{}{}{
+	I studied and implemented on MATLAB various techniques for efficiently bounding the chromatic number of a graph.
+}
+
+\cventry[0.8em]{2019}{Simulation of Random Samples	from Parametric Distributions}{}{}{}{
+	I used MATLAB to study and visualise the behaviour of random variables sampled from various distributions (exponential, gamma, normal, chi-squared).
+}
+
+\cventry[0.8em]{2018}{Ordinary Differential Equations}{}{}{}{
+	I used MATLAB to study and compare three methods for solving ODEs (Leapfrog, Euler, RK4).
+}
+
+
+\section{Essays/Presentations}
+
+\cventry[0.8em]{2021}{NIP Theories and O-minimality}{Part III, University of Cambridge}{
+	\faGithub\ \href{https://github.com/pk-470/nip-theories}{\protect\path{pk-470/nip-theories}}}{}{
+	As a part of my master's in Mathematics I worked on an expository essay on Model Theory, a branch of Mathematical Logic. This essay required extensive independent research and study of multiple papers, which I then had to condense and combine into a coherent and focused text.
+}
+
+\cventry[0.8em]{2016}{Inversion: Properties and Applications}{8th International Week Dedicated to Maths}{Thessaloniki}{}{
+	While still being a student in Mandoulides Schools I independently worked on and presented a project on the properties of geometric inversion and how it can be used to produce imaginative solutions to very hard competition problems.
+}
+
+
+\section{Extracurricular projects and education}
+
+\cventry[0.8em]{2022}{CS50’s Introduction to Artificial Intelligence with Python}{}{
+	\faGithub\ \href{https://github.com/pk-470/cs50-ai-with-python}{\protect\path{pk-470/cs50-ai-with-python}}}{}{
+	In order to familiarize myself with the basics of Artificial Intelligence and also improve my skills in Python I completed the online course ``CS50’s Introduction to Artificial Intelligence with Python'' offered by HarvardX.
+}
+
+\cventry[0.8em]{2022}{ACM AUTh Days of Coding}{}{
+	\faGithub\ \href{https://github.com/pk-470/acm-auth-days-of-coding}{\protect\path{pk-470/acm-auth-days-of-coding}}}{}{
+	I took part in the online team programming competition "Days of Coding" organised by the ACM team from the Aristotle University of Thessaloniki. Our team came first among the 30 teams participating.}
+
+\cventry[0.8em]{2022}{Supermod}{}{
+	\faGithub\ \href{https://github.com/pk-470/Supermod}{\protect\path{pk-470/Supermod}}}{}{
+	In order to teach myself Python I created a Discord bot whose duties include fetching and manipulating data from Google spreadsheets, extracting and formatting data from messages, interacting with the users and making posts periodically.
+}
+
+
+\section{Awards/Competitions}
+
+\cventry[0.8em]{2016}{33rd Greek National Mathematical Olympiad}{Hellenic Mathematical Society}{}{\newline Silver Medal}{}
+
+\cventry[0.8em]{2016}{Kangaroo Hellas Mathematical Competition}{Kangourou Sans Frontieres}{}{\newline Distinction}{}
+
+\cventry[0.8em]{2015}{American Mathematics Competition - AMC 10}{Mathematical Association of America}{}{\newline Distinction}{
+	Arrived in top 2.5\% internationally.
+}
+
+\cventry[0.8em]{2015}{4th Junior European Mathematical Cup}{Young Gifted Mathematicians Marin Getaldić}{}{\newline Third Prize}{}
+
+\cventry[0.8em]{2015}{32nd Greek National Mathematical Olympiad}{Hellenic Mathematical Society}{}{\newline Silver Medal}{}
+
+\cventry[0.8em]{2015}{25th Panhellenic Physics Competition}{Hellenic Society for Physics, Science and Education}{}{\newline 1st Place}{}
+
+\cventry[0.8em]{2014}{18th Junior Balkan Mathematical Olympiad}{Union of Mathematicians of Macedonia}{}{\newline Bronze Medal}{}
+
+\cventry[0.8em]{2014}{31st Greek Junior National Mathematical Olympiad}{Hellenic Mathematical Society}{}{\newline Gold Medal}{}
+
+\cventry[0.8em]{2013}{30th Greek Junior National Mathematical Olympiad}{Hellenic Mathematical Society}{}{\newline Silver Medal}{}
+
+
+\section{Languages}
+
+\cvitem[0.8em]{}{
+	Greek (mother tongue), English (proficient), German (elementary).
+}
+
+
+\section{Additional information}
+
+\cvitem[0.8em]{2018}{
+	I was a member of the Emmanual College Boatclub in Cambridge and I rowed in the 2018 Fairbairn Cup.
+}
+
+\cvitem[0.8em]{2017 -}{
+	For the past few years I have been playing the electric bass.
+}
+
+
+\end{document}
